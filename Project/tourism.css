@@ -1,0 +1,46 @@
+body{  background-image: linear-gradient(to right top, #808c26, #8f9945, #9ea762, #adb47e, #bcc29a, #b6b394, #aca58f, #a0988b, #796f68, #514946, #2a2626, #000000);
+}
+.checked {
+  color: orange;
+}
+
+
+#div1{
+  margin: 100px 100px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+#nav{
+	background-color:black;
+  
+}
+input.search:hover{
+      background: #fff;
+}
+
+
+
+

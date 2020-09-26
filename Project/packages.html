@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Packages</title>
+	<link rel="stylesheet" href="tourism.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+
+
+
+
+	<style>
+		.checked {
+  				color: orange;
+				}
+			
+}
+	</style>
+</head>
+
+<body>
+<div ng-app="">
+	<div class="fixed-top" style="margin:0px 100px; width:auto;  overflow: hidden;" >
+		<ul id="nav">
+			<li><a href="Tourism.html">Home</a></li>
+			
+			
+			<li style="float:right; padding:5px 25px; "><input style="background-color:#334d4d; border:0px; color:white;" class="search form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+				ng-model="test"></li>
+			
+		</ul>
+	</div>
+<div style="height:2000px;"   id="div1"  ng-init="data = [
+{
+	pic:'agra.jpg',
+	dist:'Agra',
+	state:'UP',
+	d:2,
+	n:3,
+	rating:3,
+	price:2000.00
+},
+{	pic:'delhi.jfif',
+	dist:'Delhi',
+	state:'New Delhi',
+	d:3,
+	n:4,
+	rating:4.5,
+	price:7000.00
+},
+{	pic:'jaipur.jpg',
+	dist:'Jaipur',
+	state:'Rajsthan',
+	d:2,
+	n:3,
+	rating:4,
+	price:10000.00
+},
+{
+	pic:'up.jpg',
+	dist:'Varanasi',
+	state:'UP',
+	d:2,
+	n:3,
+	rating:3,
+	price:2000.00
+},
+{	pic:'kerla.jfif',
+	dist:'Kerala',
+	state:'Kerala',
+	d:3,
+	n:4,
+	rating:4.5,
+	price:7000.00
+},
+{	pic:'guwhati.jfif',
+	dist:'Guwahati',
+	state:'Assam',
+	d:3,
+	n:4,
+	rating:4,
+	price:10000.00
+},
+{
+	pic:'dalhouse.jpg',
+	dist:'Dalhousie',
+	state:'Himachal Pradesh',
+	d:2,
+	n:3,
+	rating:3,
+	price:2000.00
+},
+{	pic:'gangtok.jpg',
+	dist:'Gangtok',
+	state:'Sikkim',
+	d:3,
+	n:4,
+	rating:4.5,
+	price:7000.00
+},
+{	pic:'darj.jpg',
+	dist:'Darjeeling',
+	state:'West Bengal',
+	d:3,
+	n:4,
+	rating:4,
+	price:10000.00
+}
+]">
+  
+<!-- <p><input type="text" ng-model="test"></p> -->
+
+		<div class="card" style="width: 250px;margin:20px 50px; border:0px; display: inline-block; background-color: #F5F9FA;" ng-repeat="x in data | filter:test">
+			<img class="card-img-top" src={{x.pic}} alt="Card image cap" width="200px" height="200px">
+			<div class="card-body" style="background-color:#e0ebeb">
+			  <h4><b>{{x.dist}}</b></h4>
+			  <p>{{x.d}} days,&nbsp;{{x.n}} nights  &emsp; <b>Rs {{x.price}}</b></p>
+			  <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+&emsp;&emsp;<a href="#" class="btn " style="background-color:#334d4d; color: white;">Book</a>
+			  <p style="font-size:13px"><i class="fa fa-map-marker" ></i>&nbsp; {{x.state}}&ensp; <i class="fa fa-sun-o">&nbsp;3 day &ensp; <i class="fa fa-moon-o"></i>&nbsp;2 nights</i></p>
+			</div>
+	  
+
+  </div>
+</div>
+</div>
+
+</body>
+</html>

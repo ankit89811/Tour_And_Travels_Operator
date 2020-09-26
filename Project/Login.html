@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	 <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+
+    <style>
+		body {
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    background: #134E5E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #71B280, #134E5E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #71B280, #134E5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+		.div1{
+			margin:100px 250px;
+			
+		}
+		input{
+			  margin: 20px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 0.1em solid #333333;
+  background-color: black;
+  color: #fff;
+  font-size: 16px;
+
+		}
+		.card{
+			margin: 50px 50px;
+			border: none;
+			background-color: black;
+			
+		}
+				a{
+			text-decoration: none;
+			color: #fff;
+			font-size: 16px;
+		}
+		a:hover{
+			text-decoration: none;
+			color:white;
+		}
+	</style>
+</head>
+<body>
+
+<div class="row div1">
+	<div class="col-5" style="border-radius:5px 0px 0px 5px ">
+		<img src="https://images.unsplash.com/photo-1573373097623-52f20dbc4355?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" width="400px" height="400px">
+	</div>
+	<div class="col-6" style="background-color: black; border-radius: 0px 5px 5px 0px">
+		<div class="card">
+			<h3 style="color: whitesmoke">Login</h3>
+			<form  action="#" name="myform" method="post" onsubmit="return myFun()">
+		<input class="input-group" type="text" name="email"  placeholder="E-mail" >
+		<input class="input-group" type="password" name="password"  placeholder="Password" >
+		<input class=" btn btn-primary" type="submit"   value="Submit" style="background-color: ">
+		<p><a href="signup.html">Create a new account.</a></p>
+		
+</form>
+		</div>
+	</div>
+</div>
+
+
+
+<script>
+	
+	function myFun(){
+
+		var e=document.myform.email.value;
+		var y=document.myform.password.value;
+		var atposition=e.indexOf("@");  
+		var dotposition=e.lastIndexOf("."); 
+		var p="jitu@gmail.com";
+		var q="jeetu12"
+	
+		
+	if( y=="" || e=="")
+	{
+		alert("required!!!")
+		return false;
+	}
+	else if(e!=p)
+		{
+			alert("incorrect email");
+			return false;
+
+		}
+		else if(y!=q){
+			alert("incorrect password");
+			return false;
+		}
+
+    else {
+
+		return true;
+
+				}
+	
+	}
+
+</script>
+
+</body>
+</html>
